@@ -41,16 +41,8 @@ body {
   background-color: #f2f2f2;
 }
 
-.width_full {
-  width: 100%;
-}
-
 .display_ib {
   display: inline-block;
-}
-
-.margin_center {
-  margin: 0 auto;
 }
 
 .header {
@@ -60,10 +52,6 @@ body {
   top: 0;
   width: 100vw;
   z-index: 100;
-}
-
-.header-inner {
-  overflow: auto;
 }
 
 .header__icon {
@@ -85,8 +73,11 @@ body {
   color: #333;
 }
 
-.title-inner {
+.main {
   margin-top: 78px;
+}
+
+.title-inner {
   padding: 250px 0;
 }
 
@@ -148,11 +139,8 @@ body {
   transition: 0.3s;
 }
 
-.our-latest-work__img:first-child {
-  margin-left: 0;
-}
-
-.our-latest-work__img:nth-child(4) {
+.our-latest-work__img:first-child,
+.our-latest-work__img:nth-child(3n+1) {
   margin-left: 0;
 }
 
@@ -206,10 +194,6 @@ body {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
 
-  .margin_center {
-    margin: 0 auto;
-  }
-
   .float_none {
     float: none;
   }
@@ -243,21 +227,23 @@ body {
     width: 680px;
   }
 
-  .our-latest-work__img {
+  .our-latest-work__img,
+  .our-latest-work__img:first-child  {
     width: 300px;
-  }
-
-  .our-latest-work__img:first-child {
     margin: 0 auto;
   }
 
-  .our-latest-work__img:nth-child(4) {
-    margin: 80px auto 0 auto;
+  .our-latest-work__img:nth-child(3n+1) {
+    margin: 80px auto 0 auto;  
   }
-
+  
   .our-latest-work__img-wrapper {
     display: flex;
     flex-direction: column;
+  }
+
+  .our-latest-work__contact-button {
+    margin: 0 auto;
   }
 
   .our-skills__img {
@@ -272,20 +258,16 @@ body {
 
 @media screen and (max-width: 767px) {
 
-  .margin_center {
-    margin: 0 auto;
-  }
-
-  .width_full {
-    width: 100%;
-  }
-
   .float_none {
     float: none;
   }
 
   .inner {
     width: 97%;
+  }
+
+  .header__nav-line {
+    width: 100%;
   }
 
   .header__contact-button {
@@ -360,7 +342,7 @@ body {
   .our-latest-work__text {
     display: block;
     font-size: 18px;
-    padding-bottom: 40px;
+    margin: 80px auto 40px auto;
     width: 300px;
   }
 
@@ -368,20 +350,15 @@ body {
     margin-left: 0;
   }
 
-  .our-latest-work__img {
-    width: 300px;
-  }
   
-  .our-latest-work__img:first-child {
-    margin: 0 auto;
-  } 
-
-  .our-latest-work__img:nth-child(4) {
+  .our-latest-work__img:nth-child(3n+1) {
     margin: 80px auto 0 auto;
   }
-
-  .our-latest-work__img:last-child {
-    margin-bottom: 80px;
+  
+  .our-latest-work__img,
+  .our-latest-work__img:first-child {
+    width: 300px;
+    margin: 0 auto;
   }
 
   .our-latest-work__img-wrapper {
@@ -404,5 +381,6 @@ body {
 
   .sns__icon {
     padding: 30px 0;
+    width: 100%;
   }
 }
