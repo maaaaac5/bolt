@@ -278,23 +278,18 @@ body {
   }
 
   .header__nav-line {
-    display: block;
     background-color: #ddd;
     border-radius: 2px;
     width: 28px;
     height: 3px;
   }
 
-  .header__nav-line-top {
-    transform:translateY(-16px)
+  .header__nav-line:nth-child(2) {
+    transform: translateY(4.5px);
   }
 
-  .header__nav-line-middle {
-    transform:translateY(-11.5px)
-  }
-
-  .header__nav-line-bottom {
-    transform:translateY(-7px)
+  .header__nav-line:last-child {
+    transform: translateY(9px)
   }  
 
   .title {
